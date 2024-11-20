@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dropbox xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">
+    <folder name="T1_REA_01_IntroductieHTML.pdf" id="12" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="2" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-42" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_01_IntroductieHTML.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_01_IntroductieHTML.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2001%2f01.%20Readers%2fT1_REA_01_IntroductieHTML.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_1_1.pdf" id="13" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="3" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-44" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_1_1.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_1_1.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2001%2f02.%20Oefeningen%2fT1_REA_Oefening_1_1.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_1_2.pdf" id="14" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="4" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-45" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_1_2.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_1_2.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2001%2f02.%20Oefeningen%2fT1_REA_Oefening_1_2.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_02_TekstenSchrijven.pdf" id="13" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="3" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-48" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_02_TekstenSchrijven.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_02_TekstenSchrijven.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2002%2f01.%20Readers%2fT1_REA_02_TekstenSchrijven.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_2_3.rar" id="15" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="5" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-51" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_2_3.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_2_3.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2002%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_2_3.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_2_1.pdf" id="15" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="5" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-52" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_2_1.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_2_1.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2002%2f02.%20Oefeningen%2fT1_REA_Oefening_2_1.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_2_2.pdf" id="16" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="6" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-53" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_2_2.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_2_2.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2002%2f02.%20Oefeningen%2fT1_REA_Oefening_2_2.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_2_3.pdf" id="17" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="7" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-54" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_2_3.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_2_3.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2002%2f02.%20Oefeningen%2fT1_REA_Oefening_2_3.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_03_IntroductieCSS.pdf" id="14" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="4" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-57" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_03_IntroductieCSS.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_03_IntroductieCSS.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f01.%20Readers%2fT1_REA_03_IntroductieCSS.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_3_1.rar" id="16" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="6" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-60" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_3_1.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_3_1.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_3_1.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_3_2.rar" id="17" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="7" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-61" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_3_2.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_3_2.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_3_2.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_3_3.rar" id="18" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="8" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-62" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_3_3.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_3_3.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_3_3.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_3_4.rar" id="19" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="9" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-63" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_3_4.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_3_4.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_3_4.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_3_1.pdf" id="16" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="6" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-64" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_3_1.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_3_1.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fT1_REA_Oefening_3_1.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_3_2.pdf" id="17" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="7" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-65" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_3_2.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_3_2.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fT1_REA_Oefening_3_2.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_3_3.pdf" id="18" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="8" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-66" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_3_3.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_3_3.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fT1_REA_Oefening_3_3.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_3_4.pdf" id="19" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="9" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-67" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_3_4.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_3_4.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fT1_REA_Oefening_3_4.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_3_5.pdf" id="20" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="10" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-68" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_3_5.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_3_5.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fT1_REA_Oefening_3_5.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_3_6.pdf" id="21" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="11" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-69" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_3_6.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_3_6.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2003%2f02.%20Oefeningen%2fT1_REA_Oefening_3_6.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_04_IntroductieJavascript.pdf" id="15" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="5" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-72" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_04_IntroductieJavascript.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_04_IntroductieJavascript.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f01.%20Readers%2fT1_REA_04_IntroductieJavascript.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_4_2.rar" id="17" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="7" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-75" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_4_2.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_4_2.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_4_2.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_4_4.rar" id="18" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="8" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-76" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_4_4.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_4_4.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_4_4.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_4_1.pdf" id="17" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="7" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-77" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_4_1.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_4_1.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fT1_REA_Oefening_4_1.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_4_2.pdf" id="18" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="8" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-78" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_4_2.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_4_2.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fT1_REA_Oefening_4_2.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_4_3.pdf" id="19" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="9" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-79" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_4_3.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_4_3.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fT1_REA_Oefening_4_3.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_4_4.pdf" id="20" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="10" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-80" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_4_4.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_4_4.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fT1_REA_Oefening_4_4.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_4_5.pdf" id="21" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="11" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-81" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_4_5.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_4_5.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fT1_REA_Oefening_4_5.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_4_6.pdf" id="22" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="12" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-82" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_4_6.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_4_6.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2004%2f02.%20Oefeningen%2fT1_REA_Oefening_4_6.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_05_Lijsten_Links_Navigatie.pdf" id="16" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="6" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-85" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_05_Lijsten_Links_Navigatie.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_05_Lijsten_Links_Navigatie.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2005%2f01.%20Readers%2fT1_REA_05_Lijsten_Links_Navigatie.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_5_3.rar" id="18" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="8" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-88" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_5_3.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_5_3.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2005%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_5_3.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_5_1.pdf" id="18" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="8" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-89" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_5_1.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_5_1.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2005%2f02.%20Oefeningen%2fT1_REA_Oefening_5_1.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_5_2.pdf" id="19" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="9" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-90" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_5_2.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_5_2.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2005%2f02.%20Oefeningen%2fT1_REA_Oefening_5_2.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_5_3.pdf" id="20" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="10" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-91" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_5_3.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_5_3.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2005%2f02.%20Oefeningen%2fT1_REA_Oefening_5_3.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_5_4.pdf" id="21" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="11" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-92" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_5_4.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_5_4.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2005%2f02.%20Oefeningen%2fT1_REA_Oefening_5_4.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_06_Afbeeldingen.pdf" id="17" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="7" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-95" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_06_Afbeeldingen.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_06_Afbeeldingen.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2006%2f01.%20Readers%2fT1_REA_06_Afbeeldingen.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="Bijlage_T1_REA_Oefening_6_2.rar" id="19" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="9" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-98" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor Bijlage_T1_REA_Oefening_6_2.rar.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="Bijlage_T1_REA_Oefening_6_2.rar" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2006%2f02.%20Oefeningen%2fBijlagen%2fBijlage_T1_REA_Oefening_6_2.rar" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_6_1.pdf" id="19" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="9" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-99" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_6_1.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_6_1.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2006%2f02.%20Oefeningen%2fT1_REA_Oefening_6_1.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_6_2.pdf" id="20" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="10" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-100" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_6_2.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_6_2.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2006%2f02.%20Oefeningen%2fT1_REA_Oefening_6_2.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+    <folder name="T1_REA_Oefening_6_3.pdf" id="21" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="11" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="31050572-101" is_hidden="false">
+        <instructions text_type="text/html">
+            <text><p>Dit is een oefening voor T1_REA_Oefening_6_3.pdf.</p></text>
+        </instructions>
+        <date_due>2024-11-30T22:59:59</date_due>
+        <attachment_set>
+            <links>
+                <link name="T1_REA_Oefening_6_3.pdf" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=T1_Realiseren%2f%2fHoofdstuk%2006%2f02.%20Oefeningen%2fT1_REA_Oefening_6_3.pdf" />
+            </links>
+        </attachment_set>
+    </folder>
+</dropbox>

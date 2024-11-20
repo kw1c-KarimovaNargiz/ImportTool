@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2L Export Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #0073e6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        .file-structure {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .folder, .file {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .folder {
+            font-weight: bold;
+            color: #0073e6;
+        }
+
+        .file {
+            color: #333;
+            margin-left: 40px;
+        }
+
+        .file-label, .folder-label {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>D2L Export Generator</h1>
+        <button onclick="selectFolder()">Selecteer Folder</button>
+        <button onclick="generateAndDownloadZip()">Genereer en Download ZIP</button>
+        <div id="file-structure" class="file-structure"></div>
+    </div>
+
+    <script>
+        let fileStructure = {};
+        let dropboxMapping = {}; // { "filename.pdf": "31050572-12345", ... }
+        let globalResourceCounter = 1;
+        let selectedFolderName = ""; // Slaat de naam van de geselecteerde map op
+
+        function generateResourceCode() {
+            return `31050572-${globalResourceCounter++}`;
+        }
+
+        async function selectFolder() {
+        try {
+            const directoryHandle = await window.showDirectoryPicker();
+            selectedFolderName = directoryHandle.name; // Naam van de geselecteerde map opslaan
+            fileStructure = {};
+            await readDirectory(directoryHandle, fileStructure);
+            displayFileStructure();
+        } catch (error) {
+            console.error("Fout bij het selecteren van een map:", error);
+        }
+}
+
+async function readDirectory(directoryHandle, structure) {
+    for await (const entry of directoryHandle.values()) {
+        if (entry.kind === 'file') {
+            try {
+                const file = await entry.getFile();
+                // Sla het volledige bestand op, niet alleen de naam
+                structure[entry.name] = {
+                    file: file,
+                    path: entry.name,
+                    type: file.type
+                };
+                console.log(`Bestand ingelezen: ${entry.name}`); // Debug info
+            } catch (error) {
+                console.error(`Fout bij inlezen ${entry.name}:`, error);
+            }
+        } else if (entry.kind === 'directory') {
+            structure[entry.name] = {};
+            await readDirectory(entry, structure[entry.name]);
+        }
+    }
+}
+        function displayFileStructure() {
+            const html = generateHTML(fileStructure);
+            document.getElementById('file-structure').innerHTML = html;
+        }
+
+        function generateHTML(structure, path = '') {
+    let html = '<ul>';
+    for (const key in structure) {
+        const fullPath = path ? `${path}/${key}` : key;
+        if (structure[key]?.file) {  // Check of het een bestand is
+            html += `<li class="file">${fullPath}</li>`;
+        } else {
+            html += `<li class="folder">${key}/</li>`;
+            html += generateHTML(structure[key], fullPath);
+        }
+    }
+    html += '</ul>';
+    return html;
+}
+
+async function generateAndDownloadZip() {
+    try {
+        const zip = new JSZip();
+        
+        // XML bestanden toevoegen
+        zip.file("imsmanifest.xml", generateManifestXML());
+        zip.file("dropbox_d2l.xml", generateDropboxXML());
+
+        // Bestanden recursief toevoegen
+        await addFilesToZip(fileStructure, zip);
+
+        console.log("ZIP maken...");
+        const zipBlob = await zip.generateAsync({ type: "blob" });
+        console.log("ZIP gemaakt, start download...");
+        
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(zipBlob);
+        link.download = "D2LExport.zip";
+        link.click();
+    } catch (error) {
+        console.error("Fout bij maken ZIP:", error);
+    }
+}
+
+async function addFilesToZip(structure, zip, currentPath = '') {
+    for (const name in structure) {
+        const item = structure[name];
+        const itemPath = currentPath ? `${currentPath}/${name}` : name;
+        
+        if (item?.file) {
+            // Het is een bestand
+            try {
+                console.log(`Bestand toevoegen aan ZIP: ${itemPath}`);
+                const content = await item.file.arrayBuffer();
+                zip.file(itemPath, content);
+            } catch (error) {
+                console.error(`Fout bij toevoegen bestand ${itemPath}:`, error);
+            }
+        } else if (typeof item === 'object') {
+            // Het is een map, ga recursief door de inhoud
+            await addFilesToZip(item, zip, itemPath);
+        }
+    }
+}
+        function generateDropboxXML() {
+            let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+            xml += '<dropbox xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">\n';
+
+            xml += generateDropboxFolders(fileStructure);
+
+            xml += '</dropbox>';
+            return xml;
+        }
+
+        function generateDropboxFolders(structure, path = '', folderId = 10) {
+    let xml = '';
+
+    for (const key in structure) {
+        // Dit was het probleem:
+        // const isFile = structure[key] === null;  
+        const isFile = structure[key]?.file; 
+        
+        const resourceCode = generateResourceCode();
+        const filePath = `${selectedFolderName}/${path}/${key}`.replace(/\//g, "%2f").replace(/ /g, "%20");
+
+        if (isFile) {
+            dropboxMapping[key] = resourceCode;
+
+            xml += `    <folder name="${key}" id="${folderId}" submission_type="0" allow_text_submission="False" completion_type="0" allowable_file_type="0" folder_type="2" sort_order="${folderId - 10}" out_of="3.000000000" folder_is_retricted="false" files_per_submission="0" submissions="2" ai_human_origin="0" resource_code="${resourceCode}" is_hidden="false">\n`;
+            xml += `        <instructions text_type="text/html">\n`;
+            xml += `            <text><p>Dit is een oefening voor ${key}.</p></text>\n`;
+            xml += `        </instructions>\n`;
+            xml += `        <date_due>2024-11-30T22:59:59</date_due>\n`;
+            xml += `        <attachment_set>\n`;
+            xml += `            <links>\n`;
+            xml += `                <link name="${key}" url="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=coursefile&amp;fileId=${filePath}" />\n`;
+            xml += `            </links>\n`;
+            xml += `        </attachment_set>\n`;
+            xml += `    </folder>\n`;
+        } else if (typeof structure[key] === 'object') {
+            // Alleen recursief gaan als het een map is (en geen file object)
+            xml += generateDropboxFolders(structure[key], `${path}/${key}`, folderId + 1);
+        }
+
+        folderId++;
+    }
+
+    return xml;
+}
+
+
+
+        function generateManifestXML() {
+            let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+            xml += '<manifest identifier="D2L_26143" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">\n';
+
+            // Metadata
+            xml += '    <metadata>\n';
+            xml += '        <imsmd:lom>\n';
+            xml += '            <imsmd:general>\n';
+            xml += '                <imsmd:title>\n';
+            xml += '                    <imsmd:langstring xml:lang="nl-nl">Sandbox Remco Evers</imsmd:langstring>\n';
+            xml += '                </imsmd:title>\n';
+            xml += '                <imsmd:keyword>\n';
+            xml += '                    <imsmd:langstring xml:lang="nl-nl">SB_RemcoEvers</imsmd:langstring>\n';
+            xml += '                </imsmd:keyword>\n';
+            xml += '                <imsmd:language>nl-nl</imsmd:language>\n';
+            xml += '            </imsmd:general>\n';
+            xml += '        </imsmd:lom>\n';
+            xml += '    </metadata>\n';
+
+            // Organizations
+            xml += '    <organizations default="d2l_orgs">\n';
+            xml += '        <organization identifier="d2l_org">\n';
+            xml += generateItems(fileStructure);
+            xml += '        </organization>\n';
+            xml += '    </organizations>\n';
+
+            // Resources
+            xml += '    <resources>\n';
+            xml += generateManifestResources(fileStructure);
+            xml += '    </resources>\n';
+
+            xml += '</manifest>';
+            return xml;
+        }
+
+        function generateItems(structure, parentId = "1") {
+    let xml = '';
+    let itemId = 1;
+
+    for (const key in structure) {
+        const isFile = structure[key]?.file; // Check op file property
+        const identifier = `${parentId}${itemId}`;
+        const identifierRef = isFile ? `RES_CONTENT_${globalResourceCounter}` : '';
+        const resourceCode = isFile ? dropboxMapping[key] || '' : '';
+        const description = '';
+        const completionType = isFile ? '2' : '';
+
+        // Maak een item
+        xml += `            <item identifier="${identifier}" `;
+        if (identifierRef) xml += `identifierref="${identifierRef}" `;
+        xml += `d2l_2p0:id="${identifier}" `;
+        if (resourceCode) xml += `d2l_2p0:resource_code="${resourceCode}" `;
+        xml += `description="${description}" completion_type="${completionType}">\n`;
+
+        // Voeg de title toe
+        xml += `                <title>${key}</title>\n`;
+
+        if (!isFile && typeof structure[key] === 'object') {
+            // Genereer sub-items alleen als het een map is
+            xml += generateItems(structure[key], identifier);
+        }
+
+        xml += `            </item>\n`;
+
+        if (isFile) globalResourceCounter++;
+        itemId++;
+    }
+
+    return xml;
+}
+function generateManifestResources(structure, path = '', resourceId = 1) {
+    let xml = '';
+
+    for (const key in structure) {
+        const isFile = structure[key]?.file;
+        const identifier = `RES_CONTENT_${resourceId}`;
+        const materialType = isFile ? "content" : "contentmodule";
+        const resourceCode = dropboxMapping[key] || "";
+        let href = "";
+
+        if (isFile) {
+            if (key.includes("Oefening")) {
+                href = `/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&type=dropbox&rcode=${resourceCode}`;
+            } else {
+                href = `${path}/${key}`.replace(/\//g, "\\");
+            }
+        }
+
+        xml += `        <resource identifier="${identifier}" type="webcontent" d2l_2p0:material_type="${materialType}" d2l_2p0:link_target="" href="${href}" title="" />\n`;
+
+        if (typeof structure[key] === 'object' && !isFile) {
+            xml += generateManifestResources(structure[key], `${path}/${key}`, resourceId + 1);
+        }
+
+        resourceId++;
+    }
+
+    // Voeg extra statische resources toe
+    if (path === '') {  // Alleen op het hoogste niveau
+        xml += '        <resource identifier="res_syllabus" type="webcontent" d2l_2p0:material_type="d2lsyllabus" d2l_2p0:link_target="" href="syllabus_d2l.xml" title="" />\n';
+        xml += '        <resource identifier="res_dropbox" type="webcontent" d2l_2p0:material_type="d2ldropbox" d2l_2p0:link_target="" href="dropbox_d2l.xml" title="" />\n';
+        xml += '        <resource identifier="res_courseimage" type="webcontent" d2l_2p0:material_type="d2lcourseimage" d2l_2p0:link_target="" href="courseimage_d2l.xml" title="" />\n';
+    }
+
+    return xml;
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="D2L_26143" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+    <metadata>
+        <imsmd:lom>
+            <imsmd:general>
+                <imsmd:title>
+                    <imsmd:langstring xml:lang="nl-nl">Sandbox Remco Evers</imsmd:langstring>
+                </imsmd:title>
+                <imsmd:keyword>
+                    <imsmd:langstring xml:lang="nl-nl">SB_RemcoEvers</imsmd:langstring>
+                </imsmd:keyword>
+                <imsmd:language>nl-nl</imsmd:language>
+            </imsmd:general>
+        </imsmd:lom>
+    </metadata>
+    <organizations default="d2l_orgs">
+        <organization identifier="d2l_org">
+            <item identifier="11" d2l_2p0:id="11" description="" completion_type="">
+                <title>Hoofdstuk 01</title>
+            <item identifier="111" d2l_2p0:id="111" description="" completion_type="">
+                <title>01. Readers</title>
+            <item identifier="1111" identifierref="RES_CONTENT_1" d2l_2p0:id="1111" description="" completion_type="2">
+                <title>T1_REA_01_IntroductieHTML.pdf</title>
+            </item>
+            </item>
+            <item identifier="112" d2l_2p0:id="112" description="" completion_type="">
+                <title>02. Oefeningen</title>
+            <item identifier="1121" identifierref="RES_CONTENT_2" d2l_2p0:id="1121" description="" completion_type="2">
+                <title>T1_REA_Oefening_1_1.pdf</title>
+            </item>
+            <item identifier="1122" identifierref="RES_CONTENT_3" d2l_2p0:id="1122" description="" completion_type="2">
+                <title>T1_REA_Oefening_1_2.pdf</title>
+            </item>
+            </item>
+            </item>
+            <item identifier="12" d2l_2p0:id="12" description="" completion_type="">
+                <title>Hoofdstuk 02</title>
+            <item identifier="121" d2l_2p0:id="121" description="" completion_type="">
+                <title>01. Readers</title>
+            <item identifier="1211" identifierref="RES_CONTENT_4" d2l_2p0:id="1211" description="" completion_type="2">
+                <title>T1_REA_02_TekstenSchrijven.pdf</title>
+            </item>
+            </item>
+            <item identifier="122" d2l_2p0:id="122" description="" completion_type="">
+                <title>02. Oefeningen</title>
+            <item identifier="1221" d2l_2p0:id="1221" description="" completion_type="">
+                <title>Bijlagen</title>
+            <item identifier="12211" identifierref="RES_CONTENT_5" d2l_2p0:id="12211" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_2_3.rar</title>
+            </item>
+            </item>
+            <item identifier="1222" identifierref="RES_CONTENT_6" d2l_2p0:id="1222" description="" completion_type="2">
+                <title>T1_REA_Oefening_2_1.pdf</title>
+            </item>
+            <item identifier="1223" identifierref="RES_CONTENT_7" d2l_2p0:id="1223" description="" completion_type="2">
+                <title>T1_REA_Oefening_2_2.pdf</title>
+            </item>
+            <item identifier="1224" identifierref="RES_CONTENT_8" d2l_2p0:id="1224" description="" completion_type="2">
+                <title>T1_REA_Oefening_2_3.pdf</title>
+            </item>
+            </item>
+            </item>
+            <item identifier="13" d2l_2p0:id="13" description="" completion_type="">
+                <title>Hoofdstuk 03</title>
+            <item identifier="131" d2l_2p0:id="131" description="" completion_type="">
+                <title>01. Readers</title>
+            <item identifier="1311" identifierref="RES_CONTENT_9" d2l_2p0:id="1311" description="" completion_type="2">
+                <title>T1_REA_03_IntroductieCSS.pdf</title>
+            </item>
+            </item>
+            <item identifier="132" d2l_2p0:id="132" description="" completion_type="">
+                <title>02. Oefeningen</title>
+            <item identifier="1321" d2l_2p0:id="1321" description="" completion_type="">
+                <title>Bijlagen</title>
+            <item identifier="13211" identifierref="RES_CONTENT_10" d2l_2p0:id="13211" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_3_1.rar</title>
+            </item>
+            <item identifier="13212" identifierref="RES_CONTENT_11" d2l_2p0:id="13212" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_3_2.rar</title>
+            </item>
+            <item identifier="13213" identifierref="RES_CONTENT_12" d2l_2p0:id="13213" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_3_3.rar</title>
+            </item>
+            <item identifier="13214" identifierref="RES_CONTENT_13" d2l_2p0:id="13214" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_3_4.rar</title>
+            </item>
+            </item>
+            <item identifier="1322" identifierref="RES_CONTENT_14" d2l_2p0:id="1322" description="" completion_type="2">
+                <title>T1_REA_Oefening_3_1.pdf</title>
+            </item>
+            <item identifier="1323" identifierref="RES_CONTENT_15" d2l_2p0:id="1323" description="" completion_type="2">
+                <title>T1_REA_Oefening_3_2.pdf</title>
+            </item>
+            <item identifier="1324" identifierref="RES_CONTENT_16" d2l_2p0:id="1324" description="" completion_type="2">
+                <title>T1_REA_Oefening_3_3.pdf</title>
+            </item>
+            <item identifier="1325" identifierref="RES_CONTENT_17" d2l_2p0:id="1325" description="" completion_type="2">
+                <title>T1_REA_Oefening_3_4.pdf</title>
+            </item>
+            <item identifier="1326" identifierref="RES_CONTENT_18" d2l_2p0:id="1326" description="" completion_type="2">
+                <title>T1_REA_Oefening_3_5.pdf</title>
+            </item>
+            <item identifier="1327" identifierref="RES_CONTENT_19" d2l_2p0:id="1327" description="" completion_type="2">
+                <title>T1_REA_Oefening_3_6.pdf</title>
+            </item>
+            </item>
+            </item>
+            <item identifier="14" d2l_2p0:id="14" description="" completion_type="">
+                <title>Hoofdstuk 04</title>
+            <item identifier="141" d2l_2p0:id="141" description="" completion_type="">
+                <title>01. Readers</title>
+            <item identifier="1411" identifierref="RES_CONTENT_20" d2l_2p0:id="1411" description="" completion_type="2">
+                <title>T1_REA_04_IntroductieJavascript.pdf</title>
+            </item>
+            </item>
+            <item identifier="142" d2l_2p0:id="142" description="" completion_type="">
+                <title>02. Oefeningen</title>
+            <item identifier="1421" d2l_2p0:id="1421" description="" completion_type="">
+                <title>Bijlagen</title>
+            <item identifier="14211" identifierref="RES_CONTENT_21" d2l_2p0:id="14211" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_4_2.rar</title>
+            </item>
+            <item identifier="14212" identifierref="RES_CONTENT_22" d2l_2p0:id="14212" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_4_4.rar</title>
+            </item>
+            </item>
+            <item identifier="1422" identifierref="RES_CONTENT_23" d2l_2p0:id="1422" description="" completion_type="2">
+                <title>T1_REA_Oefening_4_1.pdf</title>
+            </item>
+            <item identifier="1423" identifierref="RES_CONTENT_24" d2l_2p0:id="1423" description="" completion_type="2">
+                <title>T1_REA_Oefening_4_2.pdf</title>
+            </item>
+            <item identifier="1424" identifierref="RES_CONTENT_25" d2l_2p0:id="1424" description="" completion_type="2">
+                <title>T1_REA_Oefening_4_3.pdf</title>
+            </item>
+            <item identifier="1425" identifierref="RES_CONTENT_26" d2l_2p0:id="1425" description="" completion_type="2">
+                <title>T1_REA_Oefening_4_4.pdf</title>
+            </item>
+            <item identifier="1426" identifierref="RES_CONTENT_27" d2l_2p0:id="1426" description="" completion_type="2">
+                <title>T1_REA_Oefening_4_5.pdf</title>
+            </item>
+            <item identifier="1427" identifierref="RES_CONTENT_28" d2l_2p0:id="1427" description="" completion_type="2">
+                <title>T1_REA_Oefening_4_6.pdf</title>
+            </item>
+            </item>
+            </item>
+            <item identifier="15" d2l_2p0:id="15" description="" completion_type="">
+                <title>Hoofdstuk 05</title>
+            <item identifier="151" d2l_2p0:id="151" description="" completion_type="">
+                <title>01. Readers</title>
+            <item identifier="1511" identifierref="RES_CONTENT_29" d2l_2p0:id="1511" description="" completion_type="2">
+                <title>T1_REA_05_Lijsten_Links_Navigatie.pdf</title>
+            </item>
+            </item>
+            <item identifier="152" d2l_2p0:id="152" description="" completion_type="">
+                <title>02. Oefeningen</title>
+            <item identifier="1521" d2l_2p0:id="1521" description="" completion_type="">
+                <title>Bijlagen</title>
+            <item identifier="15211" identifierref="RES_CONTENT_30" d2l_2p0:id="15211" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_5_3.rar</title>
+            </item>
+            </item>
+            <item identifier="1522" identifierref="RES_CONTENT_31" d2l_2p0:id="1522" description="" completion_type="2">
+                <title>T1_REA_Oefening_5_1.pdf</title>
+            </item>
+            <item identifier="1523" identifierref="RES_CONTENT_32" d2l_2p0:id="1523" description="" completion_type="2">
+                <title>T1_REA_Oefening_5_2.pdf</title>
+            </item>
+            <item identifier="1524" identifierref="RES_CONTENT_33" d2l_2p0:id="1524" description="" completion_type="2">
+                <title>T1_REA_Oefening_5_3.pdf</title>
+            </item>
+            <item identifier="1525" identifierref="RES_CONTENT_34" d2l_2p0:id="1525" description="" completion_type="2">
+                <title>T1_REA_Oefening_5_4.pdf</title>
+            </item>
+            </item>
+            </item>
+            <item identifier="16" d2l_2p0:id="16" description="" completion_type="">
+                <title>Hoofdstuk 06</title>
+            <item identifier="161" d2l_2p0:id="161" description="" completion_type="">
+                <title>01. Readers</title>
+            <item identifier="1611" identifierref="RES_CONTENT_35" d2l_2p0:id="1611" description="" completion_type="2">
+                <title>T1_REA_06_Afbeeldingen.pdf</title>
+            </item>
+            </item>
+            <item identifier="162" d2l_2p0:id="162" description="" completion_type="">
+                <title>02. Oefeningen</title>
+            <item identifier="1621" d2l_2p0:id="1621" description="" completion_type="">
+                <title>Bijlagen</title>
+            <item identifier="16211" identifierref="RES_CONTENT_36" d2l_2p0:id="16211" description="" completion_type="2">
+                <title>Bijlage_T1_REA_Oefening_6_2.rar</title>
+            </item>
+            </item>
+            <item identifier="1622" identifierref="RES_CONTENT_37" d2l_2p0:id="1622" description="" completion_type="2">
+                <title>T1_REA_Oefening_6_1.pdf</title>
+            </item>
+            <item identifier="1623" identifierref="RES_CONTENT_38" d2l_2p0:id="1623" description="" completion_type="2">
+                <title>T1_REA_Oefening_6_2.pdf</title>
+            </item>
+            <item identifier="1624" identifierref="RES_CONTENT_39" d2l_2p0:id="1624" description="" completion_type="2">
+                <title>T1_REA_Oefening_6_3.pdf</title>
+            </item>
+            </item>
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="RES_CONTENT_1" type="webcontent" d2l_2p0:material_type="contentmodule" d2l_2p0:link_target="" href="" title="" />
+        <resource identifier="RES_CONTENT_2" type="webcontent" d2l_2p0:material_type="contentmodule" d2l_2p0:link_target="" href="" title="" />
+        <resource identifier="RES_CONTENT_3" type="webcontent" d2l_2p0:material_type="contentmodule" d2l_2p0:link_target="" href="" title="" />
+        <resource identifier="RES_CONTENT_4" type="webcontent" d2l_2p0:material_type="contentmodule" d2l_2p0:link_target="" href="" title="" />
+        <resource identifier="RES_CONTENT_5" type="webcontent" d2l_2p0:material_type="contentmodule" d2l_2p0:link_target="" href="" title="" />
+        <resource identifier="RES_CONTENT_6" type="webcontent" d2l_2p0:material_type="contentmodule" d2l_2p0:link_target="" href="" title="" />
+        <resource identifier="res_syllabus" type="webcontent" d2l_2p0:material_type="d2lsyllabus" d2l_2p0:link_target="" href="syllabus_d2l.xml" title="" />
+        <resource identifier="res_dropbox" type="webcontent" d2l_2p0:material_type="d2ldropbox" d2l_2p0:link_target="" href="dropbox_d2l.xml" title="" />
+        <resource identifier="res_courseimage" type="webcontent" d2l_2p0:material_type="d2lcourseimage" d2l_2p0:link_target="" href="courseimage_d2l.xml" title="" />
+    </resources>
+</manifest>

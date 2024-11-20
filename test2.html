@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecteer Mappen en Bestanden voor XML Export</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #0073e6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        .file-structure {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .folder, .file {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .folder {
+            font-weight: bold;
+            color: #0073e6;
+        }
+
+        .file {
+            color: #333;
+            margin-left: 40px;
+        }
+
+        .file-label, .folder-label {
+            flex: 1;
+        }
+
+        .checkbox-column {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-row {
+            display: flex;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+            padding-left: 40px;
+        }
+
+        .header-row .include-label {
+            flex: 1;
+        }
+
+        .include-checkbox {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .grade-checkbox {
+            transform: scale(1.2);
+        }
+
+        .subfolder {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selecteer Mappen en Bestanden voor XML Export</h1>
+        <button onclick="selectFolder()">Map Selecteren</button>
+        <form id="file-form">
+            <div id="file-structure-title" class="file-structure"></div>
+            <div id="file-structure" class="file-structure"></div>
+            <button type="button" onclick="generateXML()">SCORM XML Exporteren</button>
+            <button type="button" onclick="generateDropboxXML()">Dropbox XML Exporteren</button>
+        </form>
+    </div>
+
+    <script>
+        let fileStructure = {};
+
+        // Selecteer map en bouw fileStructure op
+        async function selectFolder() {
+            try {
+                const directoryHandle = await window.showDirectoryPicker();
+                fileStructure = {};
+                await readDirectory(directoryHandle, fileStructure);
+                displayFileStructure();
+            } catch (err) {
+                console.error("Er is een fout opgetreden bij het selecteren van de map:", err);
+            }
+        }
+
+        // Recursieve functie om mapstructuur te lezen
+        async function readDirectory(directoryHandle, structure) {
+            for await (const entry of directoryHandle.values()) {
+                if (entry.kind === 'file') {
+                    structure[entry.name] = null;
+                } else if (entry.kind === 'directory') {
+                    structure[entry.name] = {};
+                    await readDirectory(entry, structure[entry.name]);
+                }
+            }
+        }
+
+        // Weergave van de file structuur in HTML
+        function displayFileStructure() {
+            const titles = `<div class="header-row">
+                            <div class="include-label">Bestand/Map</div>
+                            <div class="grade-label">Beoordeling</div>
+                        </div>`;
+            document.getElementById('file-structure-title').innerHTML = titles;
+            document.getElementById('file-structure').innerHTML = generateFileStructureHTML(fileStructure);
+            selectAllCheckboxes();
+        }
+
+        function generateFileStructureHTML(structure, parentPath = '') {
+            let html = '<ul>';
+            for (const key in structure) {
+                const fullPath = parentPath ? `${parentPath}/${key}` : key;
+                const isExercisePDF = key.includes("Oefening") && key.endsWith(".pdf");
+
+                if (structure[key] === null) {
+                    // Bestand
+                    html += `<li class="file">
+                                <div class="file-label"><input class="include-checkbox" type="checkbox" name="files" value="${fullPath}" checked> ${key}</div>
+                                <div class="checkbox-column">
+                                    ${isExercisePDF ? `<input class="grade-checkbox" type="checkbox" name="gradeable" value="${fullPath}" checked>` : ''}
+                                </div>
+                            </li>`;
+                } else {
+                    // Map
+                    html += `<li class="folder">
+                                <div class="folder-label"><input class="include-checkbox" type="checkbox" name="folders" value="${fullPath}" checked> ${key}</div>
+                            </li>`;
+                    html += `<div class="subfolder">${generateFileStructureHTML(structure[key], fullPath)}</div>`;
+                }
+            }
+            html += '</ul>';
+            return html;
+        }
+
+        function selectAllCheckboxes() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = true);
+        }
+
+        // SCORM XML Export functie
+        function generateXML() {
+            let xmlOutput = '<?xml version="1.0" encoding="UTF-8"?>\n';
+            xmlOutput += '<manifest identifier="D2L_26143" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" xmlns:scorm_1p2="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1">\n';
+            xmlOutput += '    <metadata>\n';
+            xmlOutput += '        <imsmd:lom>\n';
+            xmlOutput += '            <imsmd:general>\n';
+            xmlOutput += '                <imsmd:title>\n';
+            xmlOutput += '                    <imsmd:langstring xml:lang="nl-nl">Sandbox Remco Evers</imsmd:langstring>\n';
+            xmlOutput += '                </imsmd:title>\n';
+            xmlOutput += '                <imsmd:keyword>\n';
+            xmlOutput += '                    <imsmd:langstring xml:lang="nl-nl">SB_RemcoEvers</imsmd:langstring>\n';
+            xmlOutput += '                </imsmd:keyword>\n';
+            xmlOutput += '                <imsmd:language>nl-nl</imsmd:language>\n';
+            xmlOutput += '            </imsmd:general>\n';
+            xmlOutput += '        </imsmd:lom>\n';
+            xmlOutput += '    </metadata>\n';
+            xmlOutput += '    <organizations default="d2l_orgs">\n';
+            xmlOutput += '        <organization identifier="d2l_org">\n';
+
+            let itemId = 1;
+            xmlOutput += generateItemsXML(fileStructure, itemId);
+            
+            xmlOutput += '        </organization>\n';
+            xmlOutput += '    </organizations>\n';
+            xmlOutput += '    <resources>\n';
+            xmlOutput += '        <resource identifier="8126e935-4a1a-4d2a-b139-1aa36996b5d5" type="webcontent" d2l_2p0:material_type="orgunitconfig" d2l_2p0:link_target="" href="orgunitconfig/orgunitconfig.xml" title="" />\n';
+            xmlOutput += '    </resources>\n';
+            xmlOutput += '</manifest>\n';
+
+            downloadXML(xmlOutput, 'manifest.xml');
+        }
+
+        // Dropbox XML Export functie
+        function generateDropboxXML() {
+            let xmlOutput = '<?xml version="1.0" encoding="UTF-8"?>\n';
+            xmlOutput += '<dropbox xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">\n';
+
+            let folderId = 11;
+            xmlOutput += generateFoldersXML(fileStructure, folderId);
+
+            xmlOutput += '</dropbox>';
+            downloadXML(xmlOutput, 'dropbox_d2l.xml');
+        }
+
+        function generateItemsXML(structure, itemId) {
+            let xml = '';
+            for (const key in structure) {
+                const fullPath = `${key}`;
+                if (structure[key] === null) {
+                    xml += `                <item identifier="item_${itemId}" identifierref="RES_CONTENT_${itemId}" d2l_2p0:id="${itemId}" description=""><title>${key}</title></item>\n`;
+                    itemId++;
+                } else {
+                    xml += `                <item identifier="item_${itemId}" identifierref="RES_CONTENT_${itemId}" d2l_2p0:id="${itemId}" description=""><title>${key}</title>\n`;
+                    itemId++;
+                    xml += generateItemsXML(structure[key], itemId);
+                    xml += `                </item>\n`;
+                }
+            }
+            return xml;
+        }
+
+        function downloadXML(xmlOutput, filename) {
+            const blob = new Blob([xmlOutput], { type: 'application/xml' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            link.click();
+        }
+    </script>
+</body>
+</html>

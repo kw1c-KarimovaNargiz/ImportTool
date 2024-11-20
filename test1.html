@@ -78,12 +78,55 @@
         .file-label, .folder-label {
             flex: 1;
         }
+
+.checkbox-column {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-row {
+    display: flex;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+.header-row .include-label {
+    flex: 1;
+}
+
+.include-checkbox {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.include-checkbox:indeterminate {
+    background-color: #e0e0e0;
+}
+
+#selectionButtons {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+#selectionButtons button {
+    flex: 1;
+}
     </style>
 </head>
 <body>
     <div class="container">
         <h1>D2L Export Generator</h1>
         <button onclick="selectFolder()">Selecteer Folder</button>
+
+        <div id="selectionButtons" style="display: none;">
+            <button onclick="selectAllCheckboxes(true)">Selecteer Alles</button>
+            <button onclick="selectAllCheckboxes(false)">Deselecteer Alles</button>
+        </div>
+    
         <button onclick="generateAndDownloadZip()">Genereer en Download ZIP</button>
         <div id="file-structure" class="file-structure"></div>
     </div>
@@ -131,19 +174,88 @@ async function readDirectory(directoryHandle, structure) {
         }
     }
 }
-        function displayFileStructure() {
-            const html = generateHTML(fileStructure);
-            document.getElementById('file-structure').innerHTML = html;
-        }
+function displayFileStructure() {
+    const html = generateHTML(fileStructure);
+    document.getElementById('file-structure').innerHTML = html;
+    
+    // Toont selectie knoppen
+    document.getElementById('selectionButtons').style.display = 'block';
+    
+     // Event listeners aan alle checkboxes
+    addCheckboxEventListeners();
+}
 
-        function generateHTML(structure, path = '') {
+function addCheckboxEventListeners() {
+    const folderCheckboxes = document.querySelectorAll('.folder input[type="checkbox"]');
+    folderCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const folderPath = this.value;
+            const isChecked = this.checked;
+            const childCheckboxes = document.querySelectorAll(`input[type="checkbox"][value^="${folderPath}"]`);
+            childCheckboxes.forEach(childBox => {
+                childBox.checked = isChecked;
+            });
+            updateParentFolderCheckbox(this);
+        });
+    });
+
+    const fileCheckboxes = document.querySelectorAll('.file input[type="checkbox"]');
+    fileCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            updateParentFolderCheckbox(this);
+        });
+    });
+}
+
+    function updateParentFolderCheckbox(checkbox) {
+    const filePath = checkbox.value;
+    const folderPath = filePath.substring(0, filePath.lastIndexOf('/'));
+    const folderCheckbox = document.querySelector(`input[value="${folderPath}"]`);
+
+    if (folderCheckbox) {
+        // Check alle siblings
+        const siblingFiles = document.querySelectorAll(`input[value^="${folderPath}/"]`);
+        const allChecked = Array.from(siblingFiles).every(box => box.checked);
+        const anyChecked = Array.from(siblingFiles).some(box => box.checked);
+
+        folderCheckbox.checked = allChecked;
+        folderCheckbox.indeterminate = anyChecked && !allChecked;
+
+        // Recursief omhoog gaan in de structuur
+        updateParentFolderCheckbox(folderCheckbox);
+
+        // Deselecteer alle kinderen als de map wordt gedeselecteerd
+        siblingFiles.forEach(box => {
+            box.checked = folderCheckbox.checked;
+        });
+    }
+}
+function generateHTML(structure, path = '') {
     let html = '<ul>';
     for (const key in structure) {
         const fullPath = path ? `${path}/${key}` : key;
-        if (structure[key]?.file) {  // Check of het een bestand is
-            html += `<li class="file">${fullPath}</li>`;
+        if (structure[key]?.file) {
+            html += `
+                <li class="file">
+                    <div class="file-label">
+                        <input class="include-checkbox" 
+                               type="checkbox" 
+                               name="files" 
+                               value="${fullPath}" 
+                               checked> ${key}
+                    </div>
+                </li>`;
         } else {
-            html += `<li class="folder">${key}/</li>`;
+            html += `
+                <li class="folder">
+                    <div class="folder-label">
+                        <input class="include-checkbox" 
+                               type="checkbox" 
+                               name="folders" 
+                               value="${fullPath}" 
+                               checked> ${key}
+                    </div>
+                </li>`;
             html += generateHTML(structure[key], fullPath);
         }
     }
@@ -154,18 +266,28 @@ async function readDirectory(directoryHandle, structure) {
 async function generateAndDownloadZip() {
     try {
         const zip = new JSZip();
-        
+
         // XML bestanden toevoegen
         zip.file("imsmanifest.xml", generateManifestXML());
         zip.file("dropbox_d2l.xml", generateDropboxXML());
 
-        // Bestanden recursief toevoegen
-        await addFilesToZip(fileStructure, zip);
+        // Alleen geselecteerde bestanden toevoegen aan de ZIP
+        const selectedFiles = document.querySelectorAll('input[name="files"]:checked');
+        for (const fileCheckbox of selectedFiles) {
+            const filePath = fileCheckbox.value;
+            try {
+                console.log(`Bestand toevoegen aan ZIP: ${filePath}`);
+                const file = await getFileFromPath(filePath);
+                zip.file(filePath, file);
+            } catch (error) {
+                console.error(`Fout bij toevoegen bestand ${filePath}:`, error);
+            }
+        }
 
         console.log("ZIP maken...");
         const zipBlob = await zip.generateAsync({ type: "blob" });
         console.log("ZIP gemaakt, start download...");
-        
+
         const link = document.createElement("a");
         link.href = URL.createObjectURL(zipBlob);
         link.download = "D2LExport.zip";
@@ -175,25 +297,17 @@ async function generateAndDownloadZip() {
     }
 }
 
-async function addFilesToZip(structure, zip, currentPath = '') {
-    for (const name in structure) {
-        const item = structure[name];
-        const itemPath = currentPath ? `${currentPath}/${name}` : name;
-        
-        if (item?.file) {
-            // Het is een bestand
-            try {
-                console.log(`Bestand toevoegen aan ZIP: ${itemPath}`);
-                const content = await item.file.arrayBuffer();
-                zip.file(itemPath, content);
-            } catch (error) {
-                console.error(`Fout bij toevoegen bestand ${itemPath}:`, error);
-            }
-        } else if (typeof item === 'object') {
-            // Het is een map, ga recursief door de inhoud
-            await addFilesToZip(item, zip, itemPath);
+async function getFileFromPath(filePath) {
+    const parts = filePath.split('/');
+    let currentDir = fileStructure;
+    for (const part of parts) {
+        if (currentDir[part]?.file) {
+            return currentDir[part].file;
+        } else {
+            currentDir = currentDir[part];
         }
     }
+    throw new Error(`Bestand ${filePath} niet gevonden in fileStructure`);
 }
         function generateDropboxXML() {
             let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -348,6 +462,15 @@ function generateManifestResources(structure, path = '', resourceId = 1) {
     }
 
     return xml;
+}
+
+
+function selectAllCheckboxes(checked) {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = checked;
+        checkbox.indeterminate = false;
+    });
 }
 
     </script>

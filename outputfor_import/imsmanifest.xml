@@ -16,7 +16,7 @@
     <organizations default="d2l_orgs">
         <organization identifier="d2l_org">
             <item identifier="11" d2l_2p0:id="11" description="" completion_type="">
-                <title>Hoofdstuk 01</title>
+                <title></title>
             <item identifier="111" d2l_2p0:id="111" description="" completion_type="">
                 <title>01. Readers</title>
             <item identifier="1111" identifierref="RES_CONTENT_1" d2l_2p0:id="1111" description="" completion_type="2">

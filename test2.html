@@ -284,8 +284,8 @@
         }
 
         function generateHTML(structure, path = '') {
-        let html = '<ul>';
-        for (const key in structure) {
+    let html = '<ul>';
+    for (const key in structure) {
         const fullPath = path ? `${path}/${key}` : key;
         const isExercise = key.toLowerCase().includes('oefening');
         
@@ -301,22 +301,22 @@
                             checked>
                         <span class="file-name">${key}</span>
                         
-                        <div class="controls-container">
-                            ${isExercise ? `
+                        ${isExercise ? `
+                            <div class="controls-container">
                                 <div class="exercise-checkbox">
                                     <input type="checkbox" 
                                         name="exercise" 
                                         value="${fullPath}"
                                         onchange="toggleDeadlinePicker(this)">
                                 </div>
-                            ` : ''}
-                            <input class="deadline-picker"
-                                type="datetime-local"
-                                name="deadline"
-                                data-file="${fullPath}"
-                                onchange="validateDeadlines()"
-                                disabled>
-                        </div>
+                                <input class="deadline-picker"
+                                    type="datetime-local"
+                                    name="deadline"
+                                    data-file="${fullPath}"
+                                    onchange="validateDeadlines()"
+                                    disabled>
+                            </div>
+                        ` : ''}
                     </div>
                 </li>`;
         } else {
@@ -331,11 +331,11 @@
                     </div>
                 </li>`;
             html += generateHTML(structure[key], fullPath);
-            }
         }
-            html += '</ul>';
-            return html;
     }
+    html += '</ul>';
+    return html;
+}
     
     //checkbox and input handling
         function toggleFileSelection(checkbox) {
